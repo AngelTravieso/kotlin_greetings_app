@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,11 @@ class MainActivity : AppCompatActivity() {
 
         // Button
         val btn: Button = findViewById(R.id.button)
+
+        // Image
+        val img: ImageView = findViewById(R.id.img)
+
+        img.setImageResource(R.drawable.ring)
 
         // Handle the click event on the button
         btn.setOnClickListener() {
