@@ -12,30 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // EditText
-        val et: EditText = findViewById(R.id.editText1)
-        // val ett = findViewById<EditText>(R.id.editText1)
+       // Declaring Views
+        val editText: EditText = findViewById(R.id.editText1)
+        val btn = findViewById<Button>(R.id.button)
 
-        // Button
-        val btn: Button = findViewById(R.id.button)
-
-        // Image
-        val img: ImageView = findViewById(R.id.img)
-
-        img.setImageResource(R.drawable.ring)
-
-        // Handle the click event on the button
+        // Adding functionalities
         btn.setOnClickListener() {
-            // Execute this code when the button is clicked
+            val enteredText = editText.text
 
-            // Getting the input from EditText
-            val editTextInput: String = et.text.toString()
-
-            Toast.makeText(
-                this@MainActivity,
-                "$editTextInput",
-                Toast.LENGTH_LONG)
-                .show()
+            Toast.makeText(this@MainActivity,
+                "Hello $enteredText",
+                Toast.LENGTH_LONG
+            ).show()
         }
 
     }
